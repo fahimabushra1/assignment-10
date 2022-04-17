@@ -5,6 +5,7 @@ import Blogs from "./Pages/Blogs/Blogs";
 import About from "./Pages/About/About";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
+import Footer from "./Pages/Shared/Footer/Footer";
 import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <Footer></Footer>
 
     </div>
   );
