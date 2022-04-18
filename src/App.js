@@ -8,23 +8,29 @@ import Signup from "./Pages/Signup/Signup";
 import Footer from "./Pages/Shared/Footer/Footer";
 import NotFound from "./Pages/NotFound/NotFound";
 import ServiceDetail from './Pages/ServicesDetail/ServiceDetail';
+import useServices from './hooks/useServices';
+import { createContext } from 'react';
+
+export const ServiceContext = createContext()
 
 function App() {
+  const [services, setServices] = useServices()
+  // console.log(services)
   return (
-    <div>
+    <ServiceContext.Provider value={[services, setServices]}>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path='service/:serviceId' element={<ServiceDetail />} />
+        <Route path='service/:id' element={<ServiceDetail />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/about' element={<About />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer></Footer>
 
-    </div>
+    </ServiceContext.Provider>
   );
 }
 
