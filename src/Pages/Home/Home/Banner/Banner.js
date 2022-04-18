@@ -8,7 +8,7 @@ import shatGombuj from "../../../../images/banner/shat-gombuj.jpg";
 
 const Banner = () => {
     return (
-        <div className="container mt-4 bor">
+        <div className="container">
             <div className="carousel-container w-100">
                 <Carousel>
                     <Carousel.Item>

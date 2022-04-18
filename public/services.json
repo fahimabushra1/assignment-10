@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "name": "Roaming around the forest",
+        "location": "Heron Point, Katka, kachikali, Dublar Char",
+        "img": "http://greenpagebd.net/wp-content/uploads/2020/06/Sundarbans121.jpg",
+        "description": "Visit Heron Point, Katka, Dublar Char, Kachikhali.Enjoy the beauty of this forest.You can see dolphin, star fish and much more.Overnight journey on a treditional Bangladeshi passenger ferry will be fun.You can spend full three days deep inside the Sundarban on a small houseboat.You can enjoy your three times meal in the middest of nature. ",
+        "tour duration": "3 days/3 night",
+        "tour time": "October-March",
+        "tour availability": "September-May/any day start",
+        "price": "Tk 8000",
+        "inclusion": "Transport ticket,treditional ferry and boat ride,food service,first aid",
+        "exclusion": "any personal item,any food or drink which is not permitted."
+    },
+    {
+        "id": 2,
+        "name": "Explore deeply",
+        "location": "Heron Point, Katka, kachikali, Dublar Char,Dimer Char, villages",
+        "img": "http://greenpagebd.net/wp-content/uploads/2020/06/Sundarbans121.jpg",
+        "description": "Do you know about the sea beach in Sundarban? You can enjoy both sea and forest beauty.Isn't it amazing? we will visit wildlife sanctuaries inside the Sundarbans and explore creecs and canal inside the forest on a wooden rowing boat.We will walk on a trail inside the forest accompanied with armed forest guard.You can also visit crocodile and turtle breeding center.You will experience village life of Sundarban.",
+        "tour duration": "8 days/7 night",
+        "tour time": "October-March",
+        "tour availability": "September-May/any day start",
+        "price": "Tk 10000",
+        "inclusion": "Transport ticket,treditional ferry and boat ride,food service,first aid",
+        "exclusion": "any personal item,any food or drink which is not permitted."
+    },
+    {
+        "id": 3,
+        "name": "Whole day in a green",
+        "location": "Heron Point, Dublar Char, Forest office",
+        "img": "http://greenpagebd.net/wp-content/uploads/2020/06/Sundarbans121.jpg",
+        "description": "Do you want to spend your whole day in forest? If you want you can enjoy your whole day in Sundarban.",
+        "tour duration": "1 day",
+        "tour time": "October-March",
+        "tour availability": "September-May/any day start",
+        "price": "Tk 2000",
+        "inclusion": "Transport ticket,treditional ferry and boat ride,food service,first aid",
+        "exclusion": "any personal item,any food or drink which is not permitted."
+    },
+    {
+        "id": 4,
+        "name": "Shat gombuj Mosque",
+        "location": "Bagerhat city,Shat Gombuj Mosque",
+        "img": "http://greenpagebd.net/wp-content/uploads/2020/06/Sundarbans121.jpg",
+        "description": "Visit Heron Point, Katka, Dublar Char, Kachikhali.Enjoy the beauty of this forest.You can see dolphin, star fish and much more.Overnight journey on a treditional Bangladeshi passenger ferry will be fun.You can spend full three days deep inside the Sundarban on a small houseboat.You can enjoy your three times meal in the middest of nature. ",
+        "tour duration": "1 day",
+        "tour time": "October-March",
+        "tour availability": "any day start",
+        "price": "Tk 4000",
+        "inclusion": "Transport ticket,food service,first aid",
+        "exclusion": "any personal item,any food or drink which is not permitted."
+    }
+]
