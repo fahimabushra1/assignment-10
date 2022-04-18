@@ -7,11 +7,10 @@ const Header = () => {
         <div className="mx-5">
             <Navbar sticky="top" collapseOnSelect expand="lg" bg="muted" variant="success">
                 <Container>
-                    <Navbar.Brand to="/">Sundarban Parjatan</Navbar.Brand>
+                    <Navbar.Brand href="/home">Sundarban Parjatan</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link to="/">Home</Nav.Link>
-                        <Nav.Link to="#services">Services</Nav.Link>
-                        <Nav.Link to="#">Services</Nav.Link>
+                        <Nav.Link href="home#services">Services</Nav.Link>
+                        <Nav.Link href="home#reviews">Reviews</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

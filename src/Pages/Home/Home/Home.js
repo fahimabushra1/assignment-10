@@ -1,17 +1,16 @@
 import React from "react";
 import Header from "../../Shared/Header/Header";
+import Services from "../Services/Services";
 import Banner from "./Banner/Banner";
-import Services from "./Services/Services";
 
 
 
-const Home = ({ service }) => {
-    const { img, name, description } = service
+const Home = () => {
     return (
         <>
             <Header></Header>
             <Banner></Banner>
-
+            <Services></Services>
         </>
     )
 
