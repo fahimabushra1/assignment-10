@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ServiceContext } from "../../App";
 
 
@@ -24,7 +24,10 @@ const ServiceDetail = () => {
             <h4>Inclusion: {service?.inclusion}</h4>
             <h4>Exclusion: {service?.exclusion}</h4>
             <p>{service?.description}</p>
-</div>
+            <div className="text-center">
+                <Link to='/checkout'><button className="btn btn-success">Checkout</button></Link>
+            </div>
+        </div>
     )
 }
 
