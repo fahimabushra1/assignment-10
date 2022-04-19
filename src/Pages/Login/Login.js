@@ -1,9 +1,12 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
 import SocialLogin from "./SocialLogin";
+import 'react-toastify/dist/ReactToastify.css';
+import Loading from "../Shared/Loading";
 
 
 const Login = () => {
@@ -14,6 +17,8 @@ const Login = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/home";
 
+    let errorElement;
+
     const [
         signInWithEmailAndPassword,
         user,
@@ -21,10 +26,20 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+
+    if (loading || sending) {
+        return <Loading></Loading>
+    }
+
+
     if (user) {
         navigate(from, { replace: true });
     }
-
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    }
 
 
 
@@ -36,6 +51,19 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
         console.log(email, password)
     }
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else {
+            toast('please enter your email address');
+        }
+    }
+
+
 
     return (
         <div className="w-50 mx-auto">
@@ -60,8 +88,11 @@ const Login = () => {
                     Submit
                 </Button>
             </Form>
-            <p className="mt-2">New to our site?<span className="text-success cursor-pointer fw-bold" onClick={() => navigate('/signup')}> please signup</span></p>
+            {errorElement}
+            <p className="mt-2">New to our site?<span className="btn btn-link text-success pe-auto text-decoration-none fw-bold" onClick={() => navigate('/signup')}> please signup</span></p>
+            <p>Forget Password? <button className='btn btn-link text-success fw-bold pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             <SocialLogin></SocialLogin>
+            <ToastContainer />
         </div>
     )
 
