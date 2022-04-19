@@ -24,8 +24,7 @@ const ServiceDetail = () => {
             <h4>Inclusion: {service?.inclusion}</h4>
             <h4>Exclusion: {service?.exclusion}</h4>
             <p>{service?.description}</p>
-
-        </div>
+</div>
     )
 }
 
